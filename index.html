@@ -19,7 +19,7 @@
     <body>
         <!--==================== HEADER ====================-->
         <header class="header " id="header">
-            <div class="nav   container">
+            <div class="nav   container  active " id="nav">
 
                 <a href="#" class="nav__logo">
                    Genuine Gupta
@@ -60,19 +60,20 @@
                         </li>
                         <!-----Menu /close button ---------->
                        
-                        <div class="hamburger">
-                            <div class="nav__close" id="nav-close">
-                                <i class="ri-close-fill"></i>
-                            </div>
-                            <div class="nav__menu id="nav-menu">
-                                <i class="ri-apps-fill"></i>
-                            </div>
-                           
-                        </div>
+                        
                     </ul>
                 </div>
                 
 
+            </div>
+            <div class="hamburger ">
+                <div class="nav__close" id="nav__close" onclick="openMenu()">
+                    <i class="ri-close-fill"></i>
+                </div>
+                <div class="nav__menu" id="nav__menu" onclick="openMenu()">
+                    <i class="ri-apps-fill"></i>
+                </div>
+               
             </div>
             
         </header>
@@ -146,6 +147,6 @@
         <script src=""></script>
 
         <!--==================== MAIN JS ====================-->
-        <script src=""></script>
+        <script src="./asset/js/main.js"></script>
     </body>
 </html>
