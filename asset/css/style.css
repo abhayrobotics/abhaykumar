@@ -18,7 +18,7 @@
     --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
     --first-color: #ffffff;
     --first-color-second: #ccc9c9;
-    --first-color-alt: ;
+    --bg-color: #052c55;
     --first-color-lighter: ;
     --title-color:#747b8e ;
     --text-color: #618ebd;
@@ -116,6 +116,11 @@ a {
 .bdb {
     border: 1px solid blue;
     z-index: 1000;
+}
+.heading_icon{
+    position: relative;
+    top: 5px;
+    color: var(--golden-color);
 }
 
 .heading__text{
@@ -348,6 +353,7 @@ header {
 .main {
     position: relative;
     display: flex;
+    flex-direction: column;
     background-color: var(--body-color2);
     /* justify-content: center;
     align-items: center; */
@@ -377,7 +383,7 @@ header {
     /* width: 80vw; */
     /* width: 300px; */
     /* height: 2; */
-    background-color: #052c55;
+    background-color: var(--bg-color);
     border-radius: 0 0 20px   0;
     overflow: hidden;
     margin: 1rem 2rem;
@@ -396,9 +402,7 @@ header {
     right: 3px;
     text-shadow: 4px 4px black;
 }
-.heading__text .ri-award-fill{
-    color: var(--golden-color);
-}
+
 .card__title{
     color: var(--text-color);
     padding: 0.5rem;
@@ -412,4 +416,55 @@ header {
         min-width: 70vw;
     }
 
+}
+/* ?=================================About============================ */
+
+.about{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-bottom: 2rem;
+    
+}
+.about__card{
+    width: 81vw;
+    padding: 1rem;
+    /* height: 70vh; */
+    background-color: var(--bg-color);
+    display: flex;
+    align-self: center;
+    justify-content:space-around;
+    align-items: center;
+}
+.about__text{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+.about__img {
+    /* background: url(../img/profile5.png); */
+    background-size: cover;
+    /* border-radius: 10px; */
+    width: 22vw;
+}
+.about__text{
+    width: 40vw;
+}
+
+@media screen and (max-width:900px) {
+    .about__card{
+        flex-direction: column;
+    }
+    .about__text{
+        margin-top: 2rem;
+        width: 70vw;
+    }
+    
+}
+.skill__logos{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0 1rem 0;
+    font-size: var(--h1-font-size);
 }
