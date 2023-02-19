@@ -13,18 +13,19 @@
 
     /* HSL color mode */
     --body-color: rgb(224, 224, 147);
-    --body-color2:#051630;
+    --body-color2: #051630;
 
     --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
     --first-color: #ffffff;
     --first-color-second: #ccc9c9;
     --first-color-alt: ;
     --first-color-lighter: ;
-    --title-color: ;
-    --text-color: ;
+    --title-color:#747b8e ;
+    --text-color: #618ebd;
     --text-color-light: ;
     --input-color: ;
     --container-color: ;
+    --golden-color: #ff9800;
 
     /*?========== Font and typography ==========*/
     --body-font: 'Ubuntu', sans-serif;
@@ -32,11 +33,11 @@
 
     /*? .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     --big-font-size: 2.3rem;
-    --h1-font-size: ;
+    --h1-font-size:2rem ;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.2rem;
     --normal-font-size: 1rem;
-    --small-font-size:0.8rem ;
+    --small-font-size: 0.8rem;
     --smaller-font-size: 0.5rem;
 
     /*?========== Font weight ==========*/
@@ -99,29 +100,41 @@ a {
 /*?==================== REUSABLE CSS CLASSES ====================*/
 .container {
 
-    margin: 0.5rem;
-    margin-top: 0;
+    margin: 0 0.5rem;
+    
     padding: 0.5rem;
     /* border: 1px solid red; */
 }
-
+.pd-v{
+    padding: 2rem 0 1.5rem 0;
+}
 .bd {
     border: 1px solid red;
+    z-index: 1000;
 }
 
 .bdb {
     border: 1px solid blue;
+    z-index: 1000;
 }
 
+.heading__text{
+    font-size: var(--h3-font-size);
+    font-weight: 100;
+    font-family: var(--body-font);
+    /* background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: var(--title-color);
+
+}
 /*?=========================================================== Header ====================*/
 header {
-    position: relative;
-    /* height: 100vh;
-    background: rgb(0 0 0 / 39%) url(../img/hero.jpg);
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: hue; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  
 }
 
 .nav__logo {
@@ -175,7 +188,16 @@ header {
     background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
 
+.nav__menu i:hover {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav__close i:hover {
+    color: rgb(179, 3, 3);
 
 }
 
@@ -213,18 +235,12 @@ header {
         transition-timing-function: ease-in-out;
     }
 
-    header {
-        /* display: flex; */
-        /* justify-content: center; */
 
-
-        /* background-image: ; */
-    }
 
     .nav {
         background-color: var(--body-color2);
         z-index: 10;
-
+        margin: 0;
         height: 100vh;
         position: absolute;
 
@@ -268,6 +284,7 @@ header {
         margin-right: 0;
     } */
 }
+
 /*? =====================================Hero Section============================ */
 .hero__img {
     position: absolute;
@@ -282,41 +299,117 @@ header {
     background-repeat: no-repeat;
     background-blend-mode: hue;
 }
-.hero{
+
+.hero {
     display: flex;
     align-items: center;
     height: 100vh;
 }
 
-.hero__text .rainbow{
-   
+.hero__text .rainbow {
+
     background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.hero__text .rainbow{
-    
+
+.hero__text .rainbow {
+
     font-weight: 500;
     max-width: 595px;
     font-size: 40px;
 }
-.text--small{
+
+.text--small {
     color: var(--first-color);
     font-weight: 400;
 }
-.hero__button{
+
+.hero__button {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background-color: var(--body-color2);
-    
+
     border-radius: 8px;
     border: 1px solid var(--first-color);
     width: fit-content;
     cursor: pointer;
 }
-.hero__button a{
+
+.hero__button a {
     text-decoration: none;
     color: var(--first-color-second);
     font-size: var(--small-font-size);
     font-weight: 100;
+}
+
+/*? =====================================MAin Section============================ */
+
+.main {
+    position: relative;
+    display: flex;
+    background-color: var(--body-color2);
+    /* justify-content: center;
+    align-items: center; */
+}
+
+/*? =====================================Projects Section============================ */
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.project__section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 100vw; */
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 32vw;
+    min-width: 300px;
+    /* width: 80vw; */
+    /* width: 300px; */
+    /* height: 2; */
+    background-color: #052c55;
+    border-radius: 0 0 20px   0;
+    overflow: hidden;
+    margin: 1rem 2rem;
+    /* padding:0.5rem 0; */
+}
+.card__img{
+    position: relative;
+}
+.card__img i{
+
+    position: absolute;
+    z-index: 0;
+    color: var(--golden-color);
+    font-size: var(--h1-font-size);
+    top: -3px;
+    right: 3px;
+    text-shadow: 4px 4px black;
+}
+.heading__text .ri-award-fill{
+    color: var(--golden-color);
+}
+.card__title{
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+.card__text{
+    color: var(--text-color);
+    padding : 0 0 0.5rem 0.5rem;
+}
+@media screen and (max-width:730px){
+    .card{
+        min-width: 70vw;
+    }
+
 }
