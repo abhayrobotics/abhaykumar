@@ -1,0 +1,178 @@
+@media only screen and (max-width: 665px)
+{
+    /* * ||scroll animation ********************************* */
+
+/* general scroll */
+  .scroll_bt[data-scroll] {
+    transition: all 1s;
+    
+  }
+  .scroll_bt[data-scroll="in"] {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .scroll_bt[data-scroll="out"] {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+ /* left to right scroll  */
+  .scroll_lr[data-scroll] {
+    transition: all 1s;
+    
+  }
+  .scroll_lr[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  .scroll_lr[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+    
+ /*  ! right to left scroll services section */
+  .scroll_rl[data-scroll] {
+    transition: all 1s;
+    
+  }
+  .scroll_rl[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  .scroll_rl[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+    
+    /* * || navbar*************** */
+   
+    .navbar
+    {
+        position: sticky;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* * || burger */
+    .toggle
+    {
+        position: absolute;
+        top: 5.5px;
+        right: 20px;
+        /* z-index: 1010; */
+        /* border: 2px solid red; */
+    }
+    .toggle .line {
+        position: relative;
+        
+        width: 40px;
+        height: 4px;
+        margin: 4px;
+       
+        background-color: #000;
+        
+    }
+    .logo 
+    {
+    
+        align-self: flex-start;
+    }
+   
+    header ul 
+    {
+        flex-direction: column;
+        width: 100vw;
+        margin-top: 10px;
+        height: 100vh;
+        position: fixed;
+        background-color: white;
+        left:700px;
+        top: 28px;
+        /* border: 2px solid red; */
+        transition: 1s;
+        
+    }
+    ul a
+    {
+        display: flex;
+        margin: 8px;
+        transition: 0.5s;
+        /* display: none; */
+    }
+    ul a li:hover 
+    {
+        color: red;
+    }
+    header ul  a
+    {
+        align-self: center;
+    }
+    header ul  a li 
+    {
+        font-size: 22px;
+        padding: 10px ;
+        color: black;
+    }
+    /* hide menu */
+   
+    .active
+    {
+        /* display: none; */
+        left:0px
+    }
+    .toggle
+    {
+        transition: 0.5s;
+        
+    }
+    .rotate
+    {
+        transform: rotate(180deg);
+        transition: 0.5s;
+    }
+    /* * || section about */
+    .about .contentbx
+    {
+        flex-direction: column-reverse;
+    }
+    .about .contentbx .photo
+    {
+        /* width: 60%; */
+        height: 300px;
+        align-self: center;
+    }
+    /* * || section about */
+    /* * || section about */
+}
+
+@media only screen and (max-width: 470px)
+{
+    .navbar
+    {
+        position: sticky;
+        flex-direction: column;
+        justify-content: center;
+    }
+    :root
+    {
+    --font_sec : 'Dancing Script', cursive;
+    --font_size1 :32px;
+    --font_size2 :28px;
+    --font_size3 :23px;
+    --font_size4 :16px;
+    }       
+    .about .contentbx .photo
+    {       
+        min-width: 200px;
+    }
+    .allservice .tabbx
+    {
+        max-width: 80%;
+    }
+    .project1 
+    {
+        justify-content: center;
+    }
+    .project1 .image
+    {
+        min-width: 80vw;
+    }
+}

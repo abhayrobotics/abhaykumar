@@ -1,0 +1,490 @@
+@font-face{
+    font-family: font_main;
+    src: url(../font/Barlow-Regular.ttf);
+    
+}
+:root
+{
+    --font_sec : 'Dancing Script', cursive;
+    --font_size1 :36px;
+    --font_size2 :30px;
+    --font_size3 :25px;
+    --font_size4 :16px;
+    --font_sizex :20px;
+}
+
+*, body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: font_main;
+    font-size: var(--font_sizex)
+    /* background-color: coral; */
+}
+/* * ||scroll animation ********************************* */
+
+/* general scroll */
+[data-scroll] {
+    transition: all 1s;
+    
+  }
+  [data-scroll="in"] {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  [data-scroll="out"] {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+ 
+
+/* *|| navbar ********************************************************/
+header{
+    display: absolute;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+    margin: 0;
+    
+}
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 5px 10px;
+    /* text-justify: distribute; */
+   
+    
+}
+.logo
+{
+    text-transform: uppercase;
+}
+.logo h2
+{
+    font-size: var(--font_size2)
+
+}
+header ul 
+{
+    list-style: none;
+    display: flex;
+   
+}
+header ul a
+{
+    text-decoration: none;
+    padding: 8px 10px ;
+    
+}
+header ul a li{
+    color: red;
+    font-weight: 500;
+    font-size: var(--font_sizex)
+   
+}
+
+/* *|| background ******************************************************/
+
+.background
+{
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-color: rgb(255, 0, 0,0.2);
+    background-blend-mode: color-burn;
+    
+    min-height: 100vh;
+    font-family: var(--font_sec);
+    display: flex;
+    
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.headingbx
+{
+    display: inline-block;
+    margin: 10px 10px;
+    margin-top: -150px;
+    margin-bottom: 20px;
+}
+
+.headingbx h2
+{
+    margin: 5px;
+    font-size: var(--font_size1);
+}
+
+.headingbx h3
+{
+    margin: 5px;
+    font-size:  var(--font_size2);
+    margin-bottom: 20px;
+}
+.headingbx   a 
+{
+    text-decoration: none;
+
+}
+.headingbx .btn
+{
+    padding: 5px 10px;
+    border: 2px solid #000;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px;
+    font-family: font_main;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    
+}
+
+/* *|| Section about  ******************************************************/
+.about
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding-top: 40px;
+    min-width: calc(100%- 40px);
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+}
+.about h2
+{
+    margin-bottom: 10px;
+    font-size:  var(--font_size2);
+}
+.about p
+{
+    
+    font-size: var(--font_size4)
+}
+.about .contentbx
+{
+    display: flex;
+    width: 100%;
+    
+    /* align-self: flex-start; */
+    
+    
+}
+.about .contentbx .textbx
+{   
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    text-align: left;
+    min-width: 50%;
+    background-color: #ff4c4c;
+    border-radius: 5px;
+    padding: 10px;
+}
+.textbx h2{
+    text-align: center;
+    font-size: var(--font_size3);
+}
+
+.about .contentbx .photo
+{
+    /* border: 2px solid black; */
+    background-image: url(../img/photo.jpg);
+    background-size: cover;
+    background-position:top;
+    min-width: calc( 50% - 20px) ;
+    margin: 5px;
+    height: 30vw;
+    border-radius: 5px;
+}
+.show{
+    background-color: yellow;
+    display: none;
+}
+/* *|| Section Services  ******************************************************/
+.services
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #bfb3b39e;
+    padding-top: 40px;
+}
+.services h2 {
+    font-size: var(--font_size2);
+    
+}
+.allservice
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+}
+.tabbx .fa
+{
+    align-self: center;
+    font-size: 100px;
+    color: white;
+    transition: 0.5s;
+}
+.tabbx:hover .fa{
+    text-shadow: 0 0 20px #41ff1f;
+    text-shadow: 0 0 20px #3d7df3;
+    color: black;
+    
+}
+.tabbx
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    max-width: calc( 50% - 20px);
+   
+    padding:10px;
+    justify-content: center;
+    /* border: 2px solid red; */
+    background-color: #463f31;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tabbx h2
+{
+    font-size: var(--font_size3);
+    text-align: center;
+}
+.tabbx p
+{
+    font-size: var(--font_size4);
+    
+}
+/* *|| Work ********************************************************/
+.work
+{
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 40px;
+    
+}
+.work h2 
+{
+    font-size: var(--font_size2);
+    margin-bottom: 10px;
+}
+.project1
+{
+    display: flex;
+    flex-wrap:wrap ;
+    flex-direction: row;
+    /* border: 2px solid red; */
+    /* background-color: #41ff1f; */
+}
+.image1
+{
+ 
+    background: url(../img/img1.jpg);
+    background-size: cover;
+    
+    min-width: calc(50vw - 30px);
+    
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    /* border: 2px solid red; */
+}
+.image2
+{
+ 
+    background: url(../img/img2.jpg);
+    background-size: cover;
+    
+    min-width: calc(50vw - 30px);
+    
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    /* border: 2px solid red; */
+}
+.image3
+{
+ 
+    background: url(../img/img3.jpg);
+    background-size: cover;
+    
+    min-width: calc(50vw - 30px);
+    
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    /* border: 2px solid red; */
+}
+.image4
+{
+ 
+    background: url(../img/img4.jpg);
+    background-size: cover;
+    
+    min-width: calc(50vw - 30px);
+    
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    /* border: 2px solid red; */
+}
+.image
+{
+    transition: 0.5s;
+    z-index: 10;
+}
+.image:hover
+{
+    transform: translate(0px,-5px);
+    box-shadow: 5px 5px 10px gray;
+    z-index: 10;
+
+}
+/* *|| Testimonial section ********************************************************/
+
+.testimonial
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+}
+.testimonial h2{
+    font-size: var(--font_size2);
+}
+.quote1 
+{
+    font-family: var(--font_sec);
+    width: 70%;
+    height: fit-content;
+    background-color: #4b4d52;
+    padding:5px;
+    margin: 10px;
+    color: gold;
+    border-radius: 5px;
+}
+
+.quote1  p::before
+{
+    font-family:  'Times New Roman', serif;
+    content: open-quote;
+    font-size: 30px;
+    
+    
+}
+.quote1 p::after
+{
+    font-family:  'Times New Roman', serif;
+    content:close-quote;
+    font-size: 30px;
+    
+}
+.quote1  span h3
+{
+    font-weight: 300;
+    text-align: right;
+    
+}
+.quote2
+{
+    font-family: var(--font_sec);
+    font-family: 'Dancing Script', cursive;
+    width: 70%;
+    height: fit-content;
+    background-color: #4b4d52;
+    padding:5px;
+    margin: 10px;
+    color: gold;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+.quote2  p::before
+{
+    font-family:  'Times New Roman', serif;
+    content: open-quote;
+    font-size: 30px;
+    
+    
+}
+.quote2 p::after
+{
+    font-family:  'Times New Roman', serif;
+    content:close-quote;
+    font-size: 30px;
+    
+}
+.quote2  span h3
+{
+    font-weight: 300;
+    text-align: right;
+    
+}
+/* * || contact **************************************** */
+.contact
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #000;
+    color: gray;
+    padding-top: 8px;
+}
+.contactbx
+{
+    display: flex;
+    flex-direction: column;
+}
+.contactbx a
+{
+    text-decoration: none;
+    text-align: center;
+    color: gray;
+    transition: 0.5s;
+}
+.contactbx a:hover
+{
+    color: white;
+}
+
+/* * || footer ************************************************ */
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: gray;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.copyright p
+{
+    transition: 0.5s;
+
+}
+.copyright p:hover
+{
+    color: white;
+}

@@ -1,0 +1,146 @@
+body{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(#333, #000);
+    /* background: linear-gradient(#fff, #000); */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -5;
+}
+section h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-size: 6em;
+}
+section .set{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    pointer-events:none;
+}
+.set-2{
+    transform: scale(1.2) rotateY(180deg) ;
+    filter: blur(2px);
+    
+}
+.set-3{
+    /* rotateX(180deg) is responsible for upward movement */
+    transform: scale(0.6) rotateX(180deg) ;
+    filter: blur(1px);
+    z-index: -1;
+}
+section .set  div{
+    position: absolute;
+    
+    display: block;
+}
+section .set  div:nth-child(1){
+    
+    left:200px;
+    transform: scale(0.8);
+    animation:animate1 25s   infinite;
+    animation-timing-function: linear;
+
+}
+section .set  div:nth-child(2){
+    
+    left:30%;
+    transform: scale(0.8);
+    animation:animate1 12s   infinite;
+    animation-timing-function: linear;
+    animation-delay: -8s;
+
+}
+section .set  div:nth-child(3){
+    
+    left:20%;
+    transform: scale(0.8);
+    animation:animate1 18s   infinite;
+    animation-timing-function: linear;
+    animation-delay: -4s;
+}
+section .set  div:nth-child(4){
+    
+    left:60%;
+    transform: scale(0.6);
+    animation:animate1 26s   infinite;
+    animation-timing-function: linear;
+    animation-delay: -16s;
+}
+section .set  div:nth-child(5){
+    
+    left:75%;
+    transform: scale(0.8);
+    animation:animate1 12s   infinite;
+    animation-timing-function: linear;
+}
+section .set  div:nth-child(6){
+    
+    left:50%;
+    transform: scale(0.8);
+    animation:animate1 10s   infinite;
+    animation-timing-function: linear;
+    animation-delay: -1s;
+}
+section .set  div:nth-child(7){
+    
+    left:65%;
+    transform: scale(0.8);
+    animation:animate1 20s   infinite;
+    animation-timing-function: linear;
+    animation-delay: -7s;
+}
+section .set  div:nth-child(8){
+    
+    left:4%;
+    transform: scale(0.8);
+    animation:animate1 18s   infinite;
+    animation-timing-function: linear;
+    animation-delay: -8s;
+}
+
+@keyframes animate1{
+    0%{
+        
+        opacity:0;
+        top:-10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10%{
+        opacity:1;
+        transform: translateX(-20px) rotate(9deg);
+
+    }
+    20%{
+        transform: translateX(30px) rotate(90deg);
+
+    }
+    40%{
+        transform: translateX(-20px) rotate(135deg);
+
+    }
+    60%{
+        transform: translateX(-20px) rotate(180deg);
+
+    }
+    80%{
+        transform: translateX(-20px) rotate(225deg);
+
+    }
+    100%{
+        top:100%;
+        opacity:1;
+        transform: translateX(-20px) rotate(369deg);
+    }
+}

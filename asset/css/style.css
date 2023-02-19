@@ -37,7 +37,7 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.2rem;
     --normal-font-size: 1rem;
-    --small-font-size: 0.8rem;
+    --small-font-size: 0.9rem;
     --smaller-font-size: 0.5rem;
 
     /*?========== Font weight ==========*/
@@ -389,6 +389,11 @@ header {
     margin: 1rem 2rem;
     /* padding:0.5rem 0; */
 }
+.card a:hover .card__text,
+.card a:hover .card__title{
+    color:var(--first-color);
+    transition-duration: 0.5s;
+}
 .card__img{
     position: relative;
 }
@@ -436,6 +441,7 @@ header {
     align-self: center;
     justify-content:space-around;
     align-items: center;
+    border-radius: 0 0 20px 0;
 }
 .about__text{
     color: var(--text-color);
@@ -467,4 +473,28 @@ header {
     justify-content: space-around;
     padding: 2rem 0 1rem 0;
     font-size: var(--h1-font-size);
+}
+/* ?=================================Footer====================================== */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: var(--bg-color);
+    width: calc(100vw - 1rem);
+    color: var(--text-color);
+
+}
+.footer h2{
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+.footer_logos a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+.footer_logos i{
+    /* color: var(--text-color); */
+    font-size: var(--h3-font-size);
+    padding: 0 0.3rem;
 }
